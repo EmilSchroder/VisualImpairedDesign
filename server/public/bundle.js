@@ -24194,6 +24194,14 @@ var _Homepage = __webpack_require__(62);
 
 var _Homepage2 = _interopRequireDefault(_Homepage);
 
+var _Header = __webpack_require__(64);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _CustomBar = __webpack_require__(65);
+
+var _CustomBar2 = _interopRequireDefault(_CustomBar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24220,6 +24228,8 @@ var App = function (_React$Component) {
                 _react2.default.createElement(
                     _react2.default.Fragment,
                     null,
+                    _react2.default.createElement(_Header2.default, null),
+                    _react2.default.createElement(_CustomBar2.default, null),
                     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render(props) {
                             return _react2.default.createElement(_Homepage2.default, null);
                         } })
@@ -26877,6 +26887,60 @@ var Welcome = function Welcome() {
 };
 
 exports.default = Welcome;
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+    return _react2.default.createElement(
+        'nav',
+        null,
+        'This is the nav'
+    );
+};
+
+exports.default = Header;
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CustomBar = function CustomBar() {
+    return _react2.default.createElement(
+        'div',
+        null,
+        'This is the Customisation Bar'
+    );
+};
+
+exports.default = CustomBar;
 
 /***/ })
 /******/ ]);
