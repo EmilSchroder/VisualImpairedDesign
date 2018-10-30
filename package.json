@@ -2,14 +2,24 @@
   "name": "VisualImpairedDesign",
   "version": "1",
   "description": "Building a website that goes through a journey around tea growing regions",
-  "main": "y",
-  "repository": "y",
-  "author": "y",
-  "license": "y",
-  "private": false,
+  "main": "./server/index.js",
+  "repository": "https://github.com/EmilSchroder/VisualImpairedDesign.git",
+  "author": "Emil Schroder",
+  "license": "MIT",
   "scripts": {
     "start": "node server",
-    "webpack": "webpack --watch"
+    "webpack": "webpack --watch",
+    "dev": "nodemon --watch"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ]
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -19,6 +29,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "express": "^4.16.4",
+    "nodemon": "^1.18.5",
     "path": "^0.12.7",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
