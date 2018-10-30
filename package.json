@@ -1,0 +1,16 @@
+{
+  "name": "VisualImpairedDesign",
+  "version": "1",
+  "description": "Building a website that goes through a journey around tea growing regions",
+  "main": "y",
+  "repository": "y",
+  "author": "y",
+  "license": "y",
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  }
+}

@@ -1,7 +1,7 @@
 # VisualImpairedDesign
 The end product will be a website, the goal is to see what makes a website good to use from a visually impaired perspective.
 
-The website will be a tea journey.
+The website will be a tea journey. Frontend only.
 
 ## Why?
 
