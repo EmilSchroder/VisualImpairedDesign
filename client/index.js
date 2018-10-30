@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 
 import App from './components/App'
 
-document.addEventListener('DOM Content Loaded'), () =>{
+document.addEventListener('DOMContentLoaded', () =>{
     ReactDOM.render(
         <App />,
         document.getElementById('app')
     )
-}
+})
