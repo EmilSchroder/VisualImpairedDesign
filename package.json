@@ -1,8 +1,8 @@
 {
   "name": "VisualImpairedDesign",
-  "version": "1",
+  "version": "1.0.0",
   "description": "Building a website that goes through a journey around tea growing regions",
-  "main": "./server/index.js",
+  "main": "server/index.js",
   "repository": "https://github.com/EmilSchroder/VisualImpairedDesign.git",
   "author": "Emil Schroder",
   "license": "MIT",
