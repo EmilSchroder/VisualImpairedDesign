@@ -14,14 +14,14 @@ class App extends React.Component {
     render(){
         return (
             <Router>
-                <React.Fragment>
+                <div className='fullWrapper'>
                     <Header />
                     <CustomBar />
                     <Route exact path='/' render={(props)=>(
                         <Homepage /> 
                     )}/>
                     
-                </React.Fragment>
+                </div>
             </Router>
     )
     }

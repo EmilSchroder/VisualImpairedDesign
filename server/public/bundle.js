@@ -24226,8 +24226,8 @@ var App = function (_React$Component) {
                 _reactRouterDom.HashRouter,
                 null,
                 _react2.default.createElement(
-                    _react2.default.Fragment,
-                    null,
+                    'div',
+                    { className: 'fullWrapper' },
                     _react2.default.createElement(_Header2.default, null),
                     _react2.default.createElement(_CustomBar2.default, null),
                     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render(props) {
