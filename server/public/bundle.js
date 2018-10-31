@@ -26841,6 +26841,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -26855,19 +26857,78 @@ var _TeaSynopsis2 = _interopRequireDefault(_TeaSynopsis);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Homepage = function Homepage() {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    var data = [{ place: 'Darjeeling', image: 'https://www.hlimg.com/images/places2see/738X538/Darjeeling.jpg', alt: 'A gentle hill in Darjeeling, India covered in well maintained tea bushes' }, { place: 'Cameron Highlands', image: 'http://cdn.shopify.com/s/files/1/1531/9251/products/Tea_Plantation_in_Cameron_HIghlands_ca5542f3-b0f3-4ca0-8290-22ce4d8e3826_grande.jpg', alt: 'A sun is setting amoungst misty hills covered with tea bushes' }];
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-    return _react2.default.createElement(
-        'div',
-        { className: 'teaZone' },
-        _react2.default.createElement(_Welcome2.default, null),
-        data.map(function (item) {
-            return _react2.default.createElement(_TeaSynopsis2.default, { key: item.place, place: item.place, image: item.image, alt: item.alt });
-        })
-    );
-};
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Homepage = function (_React$Component) {
+    _inherits(Homepage, _React$Component);
+
+    function Homepage(props) {
+        _classCallCheck(this, Homepage);
+
+        var _this = _possibleConstructorReturn(this, (Homepage.__proto__ || Object.getPrototypeOf(Homepage)).call(this, props));
+
+        _this.state = {
+            activeTea: 'Darjeeling',
+            activeImage: 'https://www.hlimg.com/images/places2see/738X538/Darjeeling.jpg',
+            activeAlt: 'A gentle hill in Darjeeling, India covered in well maintained tea bushes'
+        };
+
+        return _this;
+    }
+
+    _createClass(Homepage, [{
+        key: 'changeTea',
+        value: function changeTea(item) {
+
+            this.setState({
+                activeTea: item.place,
+                activeImage: item.image,
+                activeAlt: item.alt
+            });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var data = [{ place: 'Darjeeling', image: 'https://www.hlimg.com/images/places2see/738X538/Darjeeling.jpg', alt: 'A gentle hill in Darjeeling, India covered in well maintained tea bushes' }, { place: 'Cameron Highlands', image: 'http://cdn.shopify.com/s/files/1/1531/9251/products/Tea_Plantation_in_Cameron_HIghlands_ca5542f3-b0f3-4ca0-8290-22ce4d8e3826_grande.jpg', alt: 'A sun is setting amoungst misty hills covered with tea bushes' }];
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'teaZone' },
+                _react2.default.createElement(_Welcome2.default, null),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(
+                        'nav',
+                        null,
+                        data.map(function (item) {
+                            return _react2.default.createElement(
+                                'button',
+                                { key: item.place, onClick: function onClick() {
+                                        return _this2.changeTea(item);
+                                    } },
+                                item.place
+                            );
+                        })
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(_TeaSynopsis2.default, { place: this.state.activeTea, image: this.state.activeImage, alt: this.state.activeAlt })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Homepage;
+}(_react2.default.Component);
 
 exports.default = Homepage;
 
@@ -26976,18 +27037,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var TeaSynopsis = function TeaSynopsis(props) {
     return _react2.default.createElement(
         'div',
-        null,
+        { className: 'teaSynopsis' },
         _react2.default.createElement(
-            'h1',
-            null,
-            props.place
+            'div',
+            { className: 'synopsisWords' },
+            _react2.default.createElement(
+                'h1',
+                null,
+                props.place
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui."'
+            )
         ),
-        _react2.default.createElement('img', { src: props.image, alt: props.alt }),
-        _react2.default.createElement(
-            'p',
-            null,
-            'blah blu'
-        )
+        _react2.default.createElement('img', { className: 'teafield', src: props.image, alt: props.alt })
     );
 };
 
