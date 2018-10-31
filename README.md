@@ -5,8 +5,14 @@ The end product will be a website, the goal is to see what makes a website good 
 The website will be a tea journey. Frontend only.
 
 ## Descisions
+html:
+- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+- default font size: 18pt;
 
-Tea Journey Header - Colours - 
+Tea Journey Header:
+- Background color: rgba(25, 3, 77, 1), a dark blue-purple
+- Text Color: white
+- Font-Family: 
 
 ## Why?
 
@@ -62,14 +68,14 @@ Think of content from a non-visual perspective. Hypertext links should describe 
 
 
 ## Learnings
-> Customisability - the community is diverse; do not prescibe styles, rather allow space for the individual to selelct what works for them
-> Layout - Keep things VERY consistent. Do not mix centered headings with left-aligned text, focus on using single columns rather than spreading information over the page
-> Colour - Keep in mind what everyone can see. There are filters for websites that allow you to see what a colourblind person would see.
-> Audience - Larger than you think
+- Customisability - the community is diverse; do not prescibe styles, rather allow space for the individual to selelct what works for them
+- Layout - Keep things VERY consistent. Do not mix centered headings with left-aligned text, focus on using single columns rather than spreading information over the page
+- Colour - Keep in mind what everyone can see. There are filters for websites that allow you to see what a colourblind person would see.
+- Audience - Larger than you think
 
 ## Key Links
-> https://blindfoundation.org.nz/how-we-can-help/businesses-and-professionals/accessible-documents-and-websites/
-> https://www.w3.org/TR/low-vision-needs/
-> https://www.teachingvisuallyimpaired.com/font-legibility.html
-> http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/
-> https://abcnz.org.nz/
+- https://blindfoundation.org.nz/how-we-can-help/businesses-and-professionals/accessible-documents-and-websites/
+- https://www.w3.org/TR/low-vision-needs/
+- https://www.teachingvisuallyimpaired.com/font-legibility.html
+- http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/
+- https://abcnz.org.nz/

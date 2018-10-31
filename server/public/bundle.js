@@ -26849,13 +26849,23 @@ var _Welcome = __webpack_require__(63);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
 
+var _TeaSynopsis = __webpack_require__(66);
+
+var _TeaSynopsis2 = _interopRequireDefault(_TeaSynopsis);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Homepage = function Homepage() {
+
+    var data = [{ place: 'Darjeeling', image: 'https://www.hlimg.com/images/places2see/738X538/Darjeeling.jpg' }, { place: 'Cameron Highlands', image: 'http://cdn.shopify.com/s/files/1/1531/9251/products/Tea_Plantation_in_Cameron_HIghlands_ca5542f3-b0f3-4ca0-8290-22ce4d8e3826_grande.jpg' }];
+
     return _react2.default.createElement(
         'div',
-        null,
-        _react2.default.createElement(_Welcome2.default, null)
+        { className: 'teaZone' },
+        _react2.default.createElement(_Welcome2.default, null),
+        data.map(function (item) {
+            return _react2.default.createElement(_TeaSynopsis2.default, { key: item.place, place: item.place, image: item.image });
+        })
     );
 };
 
@@ -26882,7 +26892,7 @@ var Welcome = function Welcome() {
     return _react2.default.createElement(
         'div',
         null,
-        'Welcome to the tea zone'
+        'Take a trip to the tea countries of the world! Choose below where you want to go.'
     );
 };
 
@@ -26907,9 +26917,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Header = function Header() {
     return _react2.default.createElement(
-        'nav',
+        'header',
         null,
-        'This is the nav'
+        'Tea Journey'
     );
 };
 
@@ -26936,11 +26946,52 @@ var CustomBar = function CustomBar() {
     return _react2.default.createElement(
         'div',
         null,
-        'This is the Customisation Bar'
+        _react2.default.createElement(
+            'nav',
+            null,
+            '///'
+        )
     );
 };
 
 exports.default = CustomBar;
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TeaSynopsis = function TeaSynopsis(props) {
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+            'h1',
+            null,
+            props.place
+        ),
+        _react2.default.createElement('img', { src: props.image }),
+        _react2.default.createElement(
+            'p',
+            null,
+            'blah blu'
+        )
+    );
+};
+
+exports.default = TeaSynopsis;
 
 /***/ })
 /******/ ]);

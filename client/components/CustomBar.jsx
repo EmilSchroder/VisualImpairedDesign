@@ -3,7 +3,9 @@ import React from 'react'
 const CustomBar = () => {
     return (
         <div>
-            This is the Customisation Bar
+            <nav>
+                ///
+            </nav>
         </div>
     )
 }
