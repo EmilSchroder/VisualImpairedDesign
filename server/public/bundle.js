@@ -26857,14 +26857,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Homepage = function Homepage() {
 
-    var data = [{ place: 'Darjeeling', image: 'https://www.hlimg.com/images/places2see/738X538/Darjeeling.jpg' }, { place: 'Cameron Highlands', image: 'http://cdn.shopify.com/s/files/1/1531/9251/products/Tea_Plantation_in_Cameron_HIghlands_ca5542f3-b0f3-4ca0-8290-22ce4d8e3826_grande.jpg' }];
+    var data = [{ place: 'Darjeeling', image: 'https://www.hlimg.com/images/places2see/738X538/Darjeeling.jpg', alt: 'A gentle hill in Darjeeling, India covered in well maintained tea bushes' }, { place: 'Cameron Highlands', image: 'http://cdn.shopify.com/s/files/1/1531/9251/products/Tea_Plantation_in_Cameron_HIghlands_ca5542f3-b0f3-4ca0-8290-22ce4d8e3826_grande.jpg', alt: 'A sun is setting amoungst misty hills covered with tea bushes' }];
 
     return _react2.default.createElement(
         'div',
         { className: 'teaZone' },
         _react2.default.createElement(_Welcome2.default, null),
         data.map(function (item) {
-            return _react2.default.createElement(_TeaSynopsis2.default, { key: item.place, place: item.place, image: item.image });
+            return _react2.default.createElement(_TeaSynopsis2.default, { key: item.place, place: item.place, image: item.image, alt: item.alt });
         })
     );
 };
@@ -26982,7 +26982,7 @@ var TeaSynopsis = function TeaSynopsis(props) {
             null,
             props.place
         ),
-        _react2.default.createElement('img', { src: props.image }),
+        _react2.default.createElement('img', { src: props.image, alt: props.alt }),
         _react2.default.createElement(
             'p',
             null,
