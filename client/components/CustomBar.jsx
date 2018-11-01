@@ -26,8 +26,8 @@ class CustomBar extends React.Component {
     dark(){
         document.getElementsByTagName('html')[0].style.backgroundColor= 'rgba(25, 3, 77,1)';
         document.getElementsByTagName('html')[0].style.color = 'white'
-        document.getElementsByTagName('header')[0].style.backgroundColor= 'rgba(25, 3, 77, 1)';
-        document.getElementsByTagName('header')[0].style.color = 'rgba(25, 3, 77, 0.158)';
+        document.getElementsByTagName('header')[0].style.backgroundColor= 'black';
+        document.getElementsByTagName('header')[0].style.color = 'white';
     }
 
     light(){
@@ -40,7 +40,7 @@ class CustomBar extends React.Component {
     render(){
     return (
         <div>
-            <nav>
+            <nav className='custom'>
                 <div>
                     <button className='smallest' onClick={()=> this.smallestFontSize()}>A</button>
                     <button className='middleist' onClick={()=> this.middleistFontSize()}>A</button>

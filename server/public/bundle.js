@@ -27047,8 +27047,8 @@ var CustomBar = function (_React$Component) {
         value: function dark() {
             document.getElementsByTagName('html')[0].style.backgroundColor = 'rgba(25, 3, 77,1)';
             document.getElementsByTagName('html')[0].style.color = 'white';
-            document.getElementsByTagName('header')[0].style.backgroundColor = 'rgba(25, 3, 77, 1)';
-            document.getElementsByTagName('header')[0].style.color = 'rgba(25, 3, 77, 0.158)';
+            document.getElementsByTagName('header')[0].style.backgroundColor = 'black';
+            document.getElementsByTagName('header')[0].style.color = 'white';
         }
     }, {
         key: 'light',
@@ -27068,7 +27068,7 @@ var CustomBar = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                     'nav',
-                    null,
+                    { className: 'custom' },
                     _react2.default.createElement(
                         'div',
                         null,
