@@ -24,9 +24,25 @@ header{
     font-size: 40pt;
 }
 
+nav{
+    position: fixed;
+}
+
 p{
     margin: 0;
     width: 100%;
+}
+
+.smallest{
+    font-size: 18pt;
+}
+
+.middleist{
+    font-size: 24pt;
+}
+
+.largest{
+    font-size: 30pt
 }
 
 .teaSynopsis{
@@ -57,4 +73,5 @@ p{
 
 .teaZone{
     width: 70%;
+    margin-top: 5%;
 }

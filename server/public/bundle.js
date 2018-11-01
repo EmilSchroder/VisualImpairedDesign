@@ -26997,23 +26997,92 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var CustomBar = function CustomBar() {
-    return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-            'nav',
-            null,
-            '///'
-        )
-    );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CustomBar = function (_React$Component) {
+    _inherits(CustomBar, _React$Component);
+
+    function CustomBar(props) {
+        _classCallCheck(this, CustomBar);
+
+        var _this = _possibleConstructorReturn(this, (CustomBar.__proto__ || Object.getPrototypeOf(CustomBar)).call(this, props));
+
+        _this.smallestFontSize = _this.smallestFontSize.bind(_this);
+        _this.middleistFontSize = _this.middleistFontSize.bind(_this);
+        _this.largestFontSize = _this.largestFontSize.bind(_this);
+        return _this;
+    }
+
+    _createClass(CustomBar, [{
+        key: 'smallestFontSize',
+        value: function smallestFontSize() {
+            document.getElementsByTagName('html')[0].style.fontSize = '18pt';
+        }
+    }, {
+        key: 'middleistFontSize',
+        value: function middleistFontSize() {
+            document.getElementsByTagName('html')[0].style.fontSize = '22pt';
+        }
+    }, {
+        key: 'largestFontSize',
+        value: function largestFontSize() {
+            document.getElementsByTagName('html')[0].style.fontSize = '24pt';
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'nav',
+                    null,
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'smallest', onClick: function onClick() {
+                                    return _this2.smallestFontSize();
+                                } },
+                            'A'
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'middleist', onClick: function onClick() {
+                                    return _this2.middleistFontSize();
+                                } },
+                            'A'
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'largest', onClick: function onClick() {
+                                    return _this2.largestFontSize();
+                                } },
+                            'A'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return CustomBar;
+}(_react2.default.Component);
 
 exports.default = CustomBar;
 

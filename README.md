@@ -10,9 +10,8 @@ html:
 - default font size: 18pt;
 
 Tea Journey Header:
-- Background color: rgba(25, 3, 77, 1), a dark blue-purple
-- Text Color: white
-- Font-Family: 
+- Background color: light purple
+- Text Color: dark purple
 
 ## Why?
 
