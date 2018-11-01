@@ -27022,6 +27022,8 @@ var CustomBar = function (_React$Component) {
         _this.smallestFontSize = _this.smallestFontSize.bind(_this);
         _this.middleistFontSize = _this.middleistFontSize.bind(_this);
         _this.largestFontSize = _this.largestFontSize.bind(_this);
+        _this.dark = _this.dark.bind(_this);
+        _this.light = _this.light.bind(_this);
         return _this;
     }
 
@@ -27039,6 +27041,22 @@ var CustomBar = function (_React$Component) {
         key: 'largestFontSize',
         value: function largestFontSize() {
             document.getElementsByTagName('html')[0].style.fontSize = '24pt';
+        }
+    }, {
+        key: 'dark',
+        value: function dark() {
+            document.getElementsByTagName('html')[0].style.backgroundColor = 'rgba(25, 3, 77,1)';
+            document.getElementsByTagName('html')[0].style.color = 'white';
+            document.getElementsByTagName('header')[0].style.backgroundColor = 'rgba(25, 3, 77, 1)';
+            document.getElementsByTagName('header')[0].style.color = 'rgba(25, 3, 77, 0.158)';
+        }
+    }, {
+        key: 'light',
+        value: function light() {
+            document.getElementsByTagName('html')[0].style.backgroundColor = 'white';
+            document.getElementsByTagName('html')[0].style.color = 'rgba(25, 3, 77,1)';
+            document.getElementsByTagName('header')[0].style.backgroundColor = 'rgba(25, 3, 77, 0.158)';
+            document.getElementsByTagName('header')[0].style.color = 'rgba(25, 3, 77, 1)';
         }
     }, {
         key: 'render',
@@ -27074,6 +27092,24 @@ var CustomBar = function (_React$Component) {
                                     return _this2.largestFontSize();
                                 } },
                             'A'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'dark', onClick: function onClick() {
+                                    return _this2.dark();
+                                } },
+                            'Dark'
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'light', onClick: function onClick() {
+                                    return _this2.light();
+                                } },
+                            'Light'
                         )
                     )
                 )
