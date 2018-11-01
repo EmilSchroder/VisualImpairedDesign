@@ -71,6 +71,7 @@ Think of content from a non-visual perspective. Hypertext links should describe 
 - Layout - Keep things VERY consistent. Do not mix centered headings with left-aligned text, focus on using single columns rather than spreading information over the page
 - Colour - Keep in mind what everyone can see. There are filters for websites that allow you to see what a colourblind person would see.
 - Audience - Larger than you think
+- Thick brush themes - having granular css on classes and components makes the switching of themes (for example colour schemes or even enlarging the text) much more difficult. There is a need to stay general!
 
 ## Key Links
 - https://blindfoundation.org.nz/how-we-can-help/businesses-and-professionals/accessible-documents-and-websites/
