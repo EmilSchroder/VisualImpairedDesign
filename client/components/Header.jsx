@@ -3,7 +3,9 @@ import React from 'react'
 const Header = () => {
     return (
         <header>
-            Tea Journey
+
+            <p className='headTitle'>Tea Journey</p>
+            
         </header>
     )
 }

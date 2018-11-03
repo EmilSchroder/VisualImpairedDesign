@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import Homepage from './Homepage'
 import Header from './Header'
 import CustomBar from './CustomBar'
+import Footer from './Footer'
 
 class App extends React.Component {
 
@@ -20,7 +21,7 @@ class App extends React.Component {
                     <Route exact path='/' render={(props)=>(
                         <Homepage /> 
                     )}/>
-                    
+                    <Footer /> 
                 </div>
             </Router>
     )

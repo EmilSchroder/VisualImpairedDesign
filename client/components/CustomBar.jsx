@@ -13,14 +13,17 @@ class CustomBar extends React.Component {
 
     smallestFontSize(){
         document.getElementsByTagName('html')[0].style.fontSize = '18pt'
+        document.getElementsByClassName('synopsisWords')[0].style.flexBasis = '37%';
     }
 
     middleistFontSize(){
         document.getElementsByTagName('html')[0].style.fontSize = '22pt'
+        document.getElementsByClassName('synopsisWords')[0].style.flexBasis = '100%';
     }
 
     largestFontSize(){
         document.getElementsByTagName('html')[0].style.fontSize = '24pt'
+        document.getElementsByClassName('synopsisWords')[0].style.flexBasis = '100%';
     }
 
     dark(){
@@ -42,13 +45,13 @@ class CustomBar extends React.Component {
         <div>
             <nav className='custom'>
                 <div>
-                    <button className='smallest' onClick={()=> this.smallestFontSize()}>A</button>
-                    <button className='middleist' onClick={()=> this.middleistFontSize()}>A</button>
-                    <button className='largest' onClick={()=> this.largestFontSize()}>A</button>
+                    <button className='smallest' alt='small font' onClick={()=> this.smallestFontSize()}>A</button>
+                    <button className='middleist' alt='middle font' onClick={()=> this.middleistFontSize()}>A</button>
+                    <button className='largest' alt='large font' onClick={()=> this.largestFontSize()}>A</button>
                 </div>
                 <div>
-                    <button className='dark' onClick={()=> this.dark()}>Dark</button>
-                    <button className='light' onClick={()=> this.light()}>Light</button>
+                    <button className='dark' alt='dark screen theme' onClick={()=> this.dark()}>Dark</button>
+                    <button className='light' alt='light screen theme' onClick={()=> this.light()}>Light</button>
                     
                 </div>
             </nav>

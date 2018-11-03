@@ -24194,13 +24194,17 @@ var _Homepage = __webpack_require__(62);
 
 var _Homepage2 = _interopRequireDefault(_Homepage);
 
-var _Header = __webpack_require__(64);
+var _Header = __webpack_require__(65);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _CustomBar = __webpack_require__(65);
+var _CustomBar = __webpack_require__(66);
 
 var _CustomBar2 = _interopRequireDefault(_CustomBar);
+
+var _Footer = __webpack_require__(67);
+
+var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24232,7 +24236,8 @@ var App = function (_React$Component) {
                     _react2.default.createElement(_CustomBar2.default, null),
                     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render(props) {
                             return _react2.default.createElement(_Homepage2.default, null);
-                        } })
+                        } }),
+                    _react2.default.createElement(_Footer2.default, null)
                 )
             );
         }
@@ -26851,7 +26856,7 @@ var _Welcome = __webpack_require__(63);
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
 
-var _TeaSynopsis = __webpack_require__(66);
+var _TeaSynopsis = __webpack_require__(64);
 
 var _TeaSynopsis2 = _interopRequireDefault(_TeaSynopsis);
 
@@ -26976,18 +26981,63 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var TeaSynopsis = function TeaSynopsis(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'teaSynopsis' },
+        _react2.default.createElement(
+            'div',
+            { className: 'synopsisWords' },
+            _react2.default.createElement(
+                'h1',
+                null,
+                props.place
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui."'
+            )
+        ),
+        _react2.default.createElement('img', { className: 'teafield', src: props.image, alt: props.alt })
+    );
+};
+
+exports.default = TeaSynopsis;
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var Header = function Header() {
     return _react2.default.createElement(
         'header',
         null,
-        'Tea Journey'
+        _react2.default.createElement(
+            'p',
+            { className: 'headTitle' },
+            'Tea Journey'
+        )
     );
 };
 
 exports.default = Header;
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27031,16 +27081,19 @@ var CustomBar = function (_React$Component) {
         key: 'smallestFontSize',
         value: function smallestFontSize() {
             document.getElementsByTagName('html')[0].style.fontSize = '18pt';
+            document.getElementsByClassName('synopsisWords')[0].style.flexBasis = '37%';
         }
     }, {
         key: 'middleistFontSize',
         value: function middleistFontSize() {
             document.getElementsByTagName('html')[0].style.fontSize = '22pt';
+            document.getElementsByClassName('synopsisWords')[0].style.flexBasis = '100%';
         }
     }, {
         key: 'largestFontSize',
         value: function largestFontSize() {
             document.getElementsByTagName('html')[0].style.fontSize = '24pt';
+            document.getElementsByClassName('synopsisWords')[0].style.flexBasis = '100%';
         }
     }, {
         key: 'dark',
@@ -27074,21 +27127,21 @@ var CustomBar = function (_React$Component) {
                         null,
                         _react2.default.createElement(
                             'button',
-                            { className: 'smallest', onClick: function onClick() {
+                            { className: 'smallest', alt: 'small font', onClick: function onClick() {
                                     return _this2.smallestFontSize();
                                 } },
                             'A'
                         ),
                         _react2.default.createElement(
                             'button',
-                            { className: 'middleist', onClick: function onClick() {
+                            { className: 'middleist', alt: 'middle font', onClick: function onClick() {
                                     return _this2.middleistFontSize();
                                 } },
                             'A'
                         ),
                         _react2.default.createElement(
                             'button',
-                            { className: 'largest', onClick: function onClick() {
+                            { className: 'largest', alt: 'large font', onClick: function onClick() {
                                     return _this2.largestFontSize();
                                 } },
                             'A'
@@ -27099,14 +27152,14 @@ var CustomBar = function (_React$Component) {
                         null,
                         _react2.default.createElement(
                             'button',
-                            { className: 'dark', onClick: function onClick() {
+                            { className: 'dark', alt: 'dark screen theme', onClick: function onClick() {
                                     return _this2.dark();
                                 } },
                             'Dark'
                         ),
                         _react2.default.createElement(
                             'button',
-                            { className: 'light', onClick: function onClick() {
+                            { className: 'light', alt: 'light screen theme', onClick: function onClick() {
                                     return _this2.light();
                                 } },
                             'Light'
@@ -27123,7 +27176,7 @@ var CustomBar = function (_React$Component) {
 exports.default = CustomBar;
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27139,29 +27192,19 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var TeaSynopsis = function TeaSynopsis(props) {
+var Footer = function Footer() {
     return _react2.default.createElement(
-        'div',
-        { className: 'teaSynopsis' },
+        'footer',
+        null,
         _react2.default.createElement(
-            'div',
-            { className: 'synopsisWords' },
-            _react2.default.createElement(
-                'h1',
-                null,
-                props.place
-            ),
-            _react2.default.createElement(
-                'p',
-                null,
-                '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui."'
-            )
-        ),
-        _react2.default.createElement('img', { className: 'teafield', src: props.image, alt: props.alt })
+            'p',
+            null,
+            '2018 For the enjoyment of tea'
+        )
     );
 };
 
-exports.default = TeaSynopsis;
+exports.default = Footer;
 
 /***/ })
 /******/ ]);

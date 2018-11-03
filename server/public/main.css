@@ -20,12 +20,23 @@ header{
     background-color: rgba(25, 3, 77, 0.158);
     color: rgba(25, 3, 77,1);
     align-items: center;
-    padding-left: 5%;
+    /* margin-left: 5%; */
     font-size: 40pt;
+}
+
+footer{
+    justify-self: baseline;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.headTitle{
+    padding-left: 5%;
 }
 
 .custom{
     position: fixed;
+    display: flex;
 }
 
 p{
@@ -49,6 +60,7 @@ p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     height: 100%;
 }
 
@@ -60,8 +72,8 @@ p{
 
 .teafield{
     flex-basis: 60%;
-    max-width: 100%;
     height: 100%;
+    justify-self: center;
 }
 
 .fullWrapper{
