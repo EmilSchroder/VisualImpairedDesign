@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <header>
+        <header className='headAndBar'>
 
             <p className='headTitle'>Tea Journey</p>
             

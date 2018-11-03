@@ -17,11 +17,18 @@ header{
     display: flex;
     height: 10vh;
     width: 100%;
-    background-color: rgba(25, 3, 77, 0.158);
-    color: rgba(25, 3, 77,1);
     align-items: center;
     /* margin-left: 5%; */
     font-size: 40pt;
+}
+
+.headTitle{
+    padding-left: 5%;
+}
+
+.headAndBar{
+    background-color: rgba(25, 3, 77, 0.158);
+    color: rgba(25, 3, 77,1);
 }
 
 footer{
@@ -30,13 +37,11 @@ footer{
     margin-top: 3%;
 }
 
-.headTitle{
-    padding-left: 5%;
-}
-
 .custom{
     position: fixed;
     display: flex;
+    width: 100%;
+
 }
 
 p{

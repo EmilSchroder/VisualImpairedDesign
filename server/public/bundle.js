@@ -27025,7 +27025,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Header = function Header() {
     return _react2.default.createElement(
         'header',
-        null,
+        { className: 'headAndBar' },
         _react2.default.createElement(
             'p',
             { className: 'headTitle' },
@@ -27100,16 +27100,16 @@ var CustomBar = function (_React$Component) {
         value: function dark() {
             document.getElementsByTagName('html')[0].style.backgroundColor = 'rgba(25, 3, 77,1)';
             document.getElementsByTagName('html')[0].style.color = 'white';
-            document.getElementsByTagName('header')[0].style.backgroundColor = 'black';
-            document.getElementsByTagName('header')[0].style.color = 'white';
+            document.getElementsByClassName('headAndBar')[0].style.backgroundColor = 'black';
+            document.getElementsByClassName('headAndBar')[0].style.color = 'white';
         }
     }, {
         key: 'light',
         value: function light() {
             document.getElementsByTagName('html')[0].style.backgroundColor = 'white';
             document.getElementsByTagName('html')[0].style.color = 'rgba(25, 3, 77,1)';
-            document.getElementsByTagName('header')[0].style.backgroundColor = 'rgba(25, 3, 77, 0.158)';
-            document.getElementsByTagName('header')[0].style.color = 'rgba(25, 3, 77, 1)';
+            document.getElementsByClassName('headAndBar')[0].style.backgroundColor = 'rgba(25, 3, 77, 0.158)';
+            document.getElementsByClassName('headAndBar')[0].style.color = 'rgba(25, 3, 77, 1)';
         }
     }, {
         key: 'render',
@@ -27121,7 +27121,7 @@ var CustomBar = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                     'nav',
-                    { className: 'custom' },
+                    { className: 'custom headAndBar' },
                     _react2.default.createElement(
                         'div',
                         null,
