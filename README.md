@@ -4,15 +4,6 @@ The end product will be a website, the goal is to see what makes a website good 
 
 The website will be a tea journey. Frontend only.
 
-## Descisions
-html:
-- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-- default font size: 18pt;
-
-Tea Journey Header:
-- Background color: light purple
-- Text Color: dark purple
-
 ## Why?
 
 The web is for everyone.
@@ -72,6 +63,7 @@ Think of content from a non-visual perspective. Hypertext links should describe 
 - Colour - Keep in mind what everyone can see. There are filters for websites that allow you to see what a colourblind person would see.
 - Audience - Larger than you think
 - Thick brush themes - having granular css on classes and components makes the switching of themes (for example colour schemes or even enlarging the text) much more difficult. There is a need to stay general!
+- Planning - decide a head of time what like items you themeatically want to group together (like headers with navbars). It is easier to think in terms of general css classes if this is done.
 
 ## Key Links
 - https://blindfoundation.org.nz/how-we-can-help/businesses-and-professionals/accessible-documents-and-websites/
