@@ -42,7 +42,7 @@ class CustomBar extends React.Component {
 
     render(){
     return (
-        <div >
+        <div className='customHolder headAndBar'>
             <nav className='custom headAndBar'>
                 <div>
                     <button className='smallest' alt='small font' onClick={()=> this.smallestFontSize()}>A</button>

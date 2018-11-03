@@ -27118,7 +27118,7 @@ var CustomBar = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'customHolder headAndBar' },
                 _react2.default.createElement(
                     'nav',
                     { className: 'custom headAndBar' },
